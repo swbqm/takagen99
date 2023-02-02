@@ -48,6 +48,7 @@
     <string name="mn_home">数据源</string>
     <string name="mn_home_show">数据源显示</string>
     <string name="mn_home_type">推荐</string>
+    <string name="mn_icon">按钮位置</string>
     <string name="mn_history_num">历史条数</string>
     <string name="mn_wall_change">换张壁纸</string>
     <string name="mn_wall_load">壁纸更换中</string>
@@ -69,6 +70,7 @@
     // Settings Dialog Pop-Up //
     <string name="dia_source">请选择数据源</string>
     <string name="dia_hm_type">请选择列表数据</string>
+    <string name="dia_hm_icon">首页按钮位置</string>
     <string name="dia_history">历史条数保留</string>
     <string name="dia_history_list">配置历史列表</string>
     <string name="dia_history_live">直播历史列表</string>
@@ -98,6 +100,9 @@
     <string name="set_permission_fail2">获取存储权限失败,请在系统设置中开启</string>
 
     // Activity Page //
+    <string name="act_app">我的应用</string>
+    <string name="act_app_sel">确定键删除当前选中应用</string>
+    <string name="act_app_rm">删除应用</string>
     <string name="act_fav">收藏夹</string>
     <string name="act_fav_sel">确定键删除当前选中收藏</string>
     <string name="act_fav_rm">删除收藏</string>
