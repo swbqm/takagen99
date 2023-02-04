@@ -16,7 +16,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="3"
-        android:text="版本：20230202-2039\n提交: 9576296f8b5d50e228a26b6549d0035dea828628\n\n更新日志:\n修复几个无关紧要的小bug，新增首页推荐位是否多行显示\n新增首页推荐位是否多行显示\n修正首页触屏左右滑动会移位\n修复没有存储权限情况下打开web页面loading不会停止导致无法操作。\n修复同名文件连续二次上传事件无法触发问题。\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
+        android:text="版本：20230204-0921\n提交: 167f96a06a67b7354a3f1d08591e0cb839d7b02b\n\n更新日志:\nMinor layout adjustment\n次要布局调整\nMoved multiline display option on Home Page\n将多行显示选项移动到主页\nFix selection focus on Source Selection\n将选择焦点固定在源选择上\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
         android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/ts_24" />
 
