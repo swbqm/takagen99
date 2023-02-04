@@ -61,8 +61,8 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
     private LinearLayout tvPush;
     public static HomeHotVodAdapter homeHotVodAdapter;
     private List<Movie.Video> homeSourceRec;
-    private TvRecyclerView tvHotListForGrid;
-    private TvRecyclerView tvHotListForLine;
+    public static TvRecyclerView tvHotListForGrid;
+    public static TvRecyclerView tvHotListForLine;
 
     public static UserFragment newInstance() {
         return new UserFragment();
@@ -78,16 +78,20 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
     }
 
     @Override
-    protected void onFragmentResume() {
-        if(Hawk.get(HawkConfig.HOME_REC_STYLE, false)){
-            tvHotListForGrid.setVisibility(View.VISIBLE);
-            tvHotListForLine.setVisibility(View.GONE);
-            tvHotListForGrid.setHasFixedSize(true);
-            tvHotListForGrid.setLayoutManager(new V7GridLayoutManager(this.mContext, 5));
-        }else {
-            tvHotListForGrid.setVisibility(View.GONE);
-            tvHotListForLine.setVisibility(View.VISIBLE);
+    public void onFragmentResume() {
+
+        // takagen99: Initialize Icon Placement
+        if (!Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true)) {
+            tvSearch.setVisibility(View.VISIBLE);
+        } else {
+            tvSearch.setVisibility(View.GONE);
         }
+        if (!Hawk.get(HawkConfig.HOME_MENU_POSITION, true)) {
+            tvSetting.setVisibility(View.VISIBLE);
+        } else {
+            tvSetting.setVisibility(View.GONE);
+        }
+
         super.onFragmentResume();
         if (Hawk.get(HawkConfig.HOME_REC, 0) == 2) {
             List<VodInfo> allVodRecord = RoomDataManger.getAllVodRecord(20);
@@ -135,8 +139,10 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
         tvHistory.setOnFocusChangeListener(focusChangeListener);
         tvPush.setOnFocusChangeListener(focusChangeListener);
         tvCollect.setOnFocusChangeListener(focusChangeListener);
-        tvHotListForGrid = findViewById(R.id.tvHotListForGrid);
         tvHotListForLine = findViewById(R.id.tvHotListForLine);
+        tvHotListForGrid = findViewById(R.id.tvHotListForGrid);
+        tvHotListForGrid.setHasFixedSize(true);
+        tvHotListForGrid.setLayoutManager(new V7GridLayoutManager(this.mContext, 5));
         homeHotVodAdapter = new HomeHotVodAdapter();
         homeHotVodAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
@@ -178,7 +184,7 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
                 Movie.Video vod = ((Movie.Video) adapter.getItem(position));
                 // Additional Check if : Home Rec 0=豆瓣, 1=推荐, 2=历史
                 if ((vod.id != null && !vod.id.isEmpty()) && (Hawk.get(HawkConfig.HOME_REC, 0) == 2)) {
-                    HawkConfig.hotVodDelete =  !HawkConfig.hotVodDelete;
+                    HawkConfig.hotVodDelete = !HawkConfig.hotVodDelete;
                     homeHotVodAdapter.notifyDataSetChanged();
                 } else {
                     Intent newIntent = new Intent(mContext, FastSearchActivity.class);
@@ -189,7 +195,7 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
                 return true;
             }
         });
-
+        // Grid View
         tvHotListForGrid.setOnItemListener(new TvRecyclerView.OnItemListener() {
             @Override
             public void onItemPreSelected(TvRecyclerView parent, View itemView, int position) {
@@ -207,7 +213,7 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
             }
         });
         tvHotListForGrid.setAdapter(homeHotVodAdapter);
-
+        // Line View
         tvHotListForLine.setOnItemListener(new TvRecyclerView.OnItemListener() {
             @Override
             public void onItemPreSelected(TvRecyclerView parent, View itemView, int position) {
@@ -228,20 +234,14 @@ public class UserFragment extends BaseLazyFragment implements View.OnClickListen
 
         initHomeHotVod(homeHotVodAdapter);
 
-        // takagen99: Initialize Icon Placement
-        boolean search_pos = Hawk.get(HawkConfig.HOME_SEARCH_POSITION, true);
-        if (!search_pos) {
-            tvSearch.setVisibility(View.VISIBLE);
+        // Swifly: Home Style
+        if (Hawk.get(HawkConfig.HOME_REC_STYLE, false)) {
+            tvHotListForGrid.setVisibility(View.VISIBLE);
+            tvHotListForLine.setVisibility(View.GONE);
         } else {
-            tvSearch.setVisibility(View.GONE);
+            tvHotListForGrid.setVisibility(View.GONE);
+            tvHotListForLine.setVisibility(View.VISIBLE);
         }
-        boolean menu_pos = Hawk.get(HawkConfig.HOME_MENU_POSITION, true);
-        if (!menu_pos) {
-            tvSetting.setVisibility(View.VISIBLE);
-        } else {
-            tvSetting.setVisibility(View.GONE);
-        }
-
     }
 
     private void initHomeHotVod(HomeHotVodAdapter adapter) {
