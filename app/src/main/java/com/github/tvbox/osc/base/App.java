@@ -63,9 +63,12 @@ public class App extends MultiDexApplication {
         putDefault(HawkConfig.HOME_REC, 1);       // Home Rec 0=豆瓣, 1=推荐, 2=历史
         putDefault(HawkConfig.PLAY_TYPE, 1);      // Player   0=系统, 1=IJK, 2=Exo
         putDefault(HawkConfig.IJK_CODEC, "硬解码");// IJK Render 软解码, 硬解码
+		putDefault(HawkConfig.HOME_SEARCH_POSITION, 0);      //主页搜索按钮位置 0=下方 ,1=上方
 //        putDefault(HawkConfig.HOME_NUM, 2);       // 历史记录数量
 //        putDefault(HawkConfig.DOH_URL, 2);        // DNS
 //        putDefault(HawkConfig.SEARCH_VIEW, 1);    // 0=文字列表搜索结果 ,1= 图片搜索结果
+//        putDefault(HawkConfig.LIVE_CROSS_GROUP, 1);    //直播：跨选分类 0=否 ,1=是
+//        putDefault(HawkConfig.LIVE_CHANNEL_REVERSE, 0);    //直播：换台反转 0= 否 ,1=是
 
     }
 

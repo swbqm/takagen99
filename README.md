@@ -3,6 +3,8 @@
 === Source Code - Editing the app default settings ===
 /src/main/java/com/github/tvbox/osc/base/App.java
 
+参考：\app\src\main\java\com\github\tvbox\osc\util\HawkConfig.java
+
     private void initParams() {
 
         putDefault(HawkConfig.HOME_REC, 2);       // Home Rec 0=豆瓣, 1=推荐, 2=历史
