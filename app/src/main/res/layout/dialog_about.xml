@@ -16,7 +16,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="3"
-        android:text="版本：20230206-1903\n提交: 1800596e62c0b460248151dbb65b5ae669a96f6d\n\n更新日志:\n修复bpm格式接口加载bug\n修复线路切换后点收藏闪退bug\n修复线路切换后点收藏闪退bug\n修复bpm格式接口加载bug\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
+        android:text="版本：20230208-0730\n提交: 07243ae086653fba1c6ae29517d04861901a1491\n\n更新日志:\n首页支持取消过滤\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
         android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/ts_24" />
 
