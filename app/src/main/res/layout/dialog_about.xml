@@ -16,7 +16,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="3"
-        android:text="版本：20230307-2315\n提交: 4249d22f35f2d2d89994316a33625da8d65443ed\n\n更新日志:\nMinor Home layout update\n取消搜索名匹配限制\nFix deleting cache\nRelease Preview Video on back pressed\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
+        android:text="版本：20230312-1121\n提交: 24fc41d99aee91eb588f22b9c5bce485d918b956\n更新日志:\n解决部分视频无限卡顿，log循环显示FFP_MSG_BUFFERING_START，FFP_MSG_BUFFERING_END\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
         android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/ts_24" />
 
