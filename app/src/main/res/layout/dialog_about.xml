@@ -16,7 +16,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="3"
-        android:text="版本：20230315-2247\n提交: 41d4252b2ee3b92db9f9ca9cd432f2e9cf460dad\n更新日志:\n同步更新内置的 DKVideoPlayer 代码\n版本回退\nFix 两处内存泄漏：EventBus和匿名内部类\nSmall Updates\nupdate okhttp to version 4\nupdate DKVideoPlayer to\nhttps://github.com/Doikki/DKVideoPlayer\npacket-buffering涉及视频缓存机制，除直播外应采用默认值\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
+        android:text="版本：20230317-2325\n提交: 0d3e4ec01db1e5d18b09dd203f03116153f8e03b\n更新日志:\小幅调整推送对话框\n更新搜索活动\n增加3个功能：\n向另一电视盒推送功能\n添加站点影藏选项，该选项可在站点列表中隐藏站点\n允许自定义一个站点json,他可以包含不同的站点\n\n本软件只提供聚合展示功能，所有资源来自网上, 软件不参与任何制作, 上传, 储存, 下载等内容. 软件仅供学习参考, 请于安装后24小时内删除。\n\n打包分发请保留出处\nhttps://github.com/CatVodTVOfficial/TVBoxOSC"
         android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/ts_24" />
 
