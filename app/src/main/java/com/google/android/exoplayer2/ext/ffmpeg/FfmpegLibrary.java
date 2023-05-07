@@ -34,22 +34,12 @@ public final class FfmpegLibrary {
 
   private static final String TAG = "FfmpegLibrary";
 
-<<<<<<< HEAD
   private static final LibraryLoader LOADER = new LibraryLoader() {
     @Override
     protected void loadLibrary(String name) {
       setLibraries("ffmpeg_jni", "swresample", "avutil", "avcodec");
     }
   };
-=======
-  private static final LibraryLoader LOADER =
-      new LibraryLoader("ffmpeg_jni", "swresample", "avutil", "avcodec") {
-        @Override
-        protected void loadLibrary(String name) {
-          System.loadLibrary(name);
-        }
-      };
->>>>>>> b8ca44ce188991daba12629b9e5d762bb8f9b8fb
 
   private static String version;
   private static int inputBufferPaddingSize = C.LENGTH_UNSET;
