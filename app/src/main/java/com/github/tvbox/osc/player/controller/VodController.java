@@ -968,9 +968,15 @@ public class VodController extends BaseController {
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
         if (isPaused) {
+<<<<<<< HEAD
             mTimeEnd.setText(R.string.vod_remaining_time + " " + PlayerUtils.stringForTime((int) TimeRemaining) + " | " + R.string.vod_ends_at + " " + timeEnd.format(afterAdd));
         } else {
             mTimeEnd.setText(R.string.vod_ends_at + " " + timeEnd.format(afterAdd));
+=======
+            mTimeEnd.setText(getContext().getString(R.string.vod_remaining_time) + " " + PlayerUtils.stringForTime((int) TimeRemaining) + " | " + getContext().getString(R.string.vod_ends_at) + " " + timeEnd.format(afterAdd));
+        } else {
+            mTimeEnd.setText(getContext().getString(R.string.vod_ends_at) + " " + timeEnd.format(afterAdd));
+>>>>>>> b8ca44ce188991daba12629b9e5d762bb8f9b8fb
         }
         mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
         mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
