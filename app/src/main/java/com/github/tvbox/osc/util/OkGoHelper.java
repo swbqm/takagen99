@@ -78,7 +78,7 @@ public class OkGoHelper {
                 return "https://doh.360.cn/dns-query";
             }
             case 4: {
-				// return "https://1.1.1.1/dns-query";   // takagen99 - removed Cloudflare
+                // return "https://1.1.1.1/dns-query";   // takagen99 - removed Cloudflare
                 return "https://dns.google/dns-query";
             }
             case 5: {
