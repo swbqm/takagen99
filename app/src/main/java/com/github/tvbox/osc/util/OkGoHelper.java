@@ -85,12 +85,6 @@ public class OkGoHelper {
                 return "https://dns.adguard.com/dns-query";
             }
             case 6: {
-                return "https://dns.adguard.com/dns-query";
-            }
-            case 7: {
-                return "https://dns.adguard.com/dns-query";
-            }
-            case 8: {
                 return "https://dns.quad9.net/dns-query";
             }
         }
@@ -103,9 +97,7 @@ public class OkGoHelper {
         dnsHttpsList.add("阿里");
         dnsHttpsList.add("360");
         dnsHttpsList.add("Google");
-        dnsHttpsList.add("CloudFlare");
         dnsHttpsList.add("AdGuard");
-        dnsHttpsList.add("AdGuard 家庭版");
         dnsHttpsList.add("Quad9");
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkExoPlayer");
