@@ -81,7 +81,7 @@ public class OkGoHelper {
                 return "https://dns.google/dns-query";
             }
             case 5: {
-                return "https://1.1.1.1/dns-query";   // takagen99
+                return "https://dns.adguard.com/dns-query";
             }
             case 6: {
                 return "https://dns.adguard.com/dns-query";
@@ -101,7 +101,7 @@ public class OkGoHelper {
         dnsHttpsList.add("腾讯");
         dnsHttpsList.add("阿里");
         dnsHttpsList.add("360");
-        dnsHttpsList.add("谷歌");
+        dnsHttpsList.add("Google");
         dnsHttpsList.add("CloudFlare");
         dnsHttpsList.add("AdGuard");
         dnsHttpsList.add("AdGuard 家庭版");
