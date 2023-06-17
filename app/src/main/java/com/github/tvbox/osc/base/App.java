@@ -72,6 +72,10 @@ public class App extends MultiDexApplication {
         putDefault(HawkConfig.HOME_REC, 1);       // Home Rec 0=豆瓣, 1=推荐, 2=历史
         putDefault(HawkConfig.PLAY_TYPE, 1);      // Player   0=系统, 1=IJK, 2=Exo
         putDefault(HawkConfig.IJK_CODEC, "硬解码");// IJK Render 软解码, 硬解码
+        putDefault ( HawkConfig . HOME_NUM , 4 );       // 历史数 4=100条
+        putDefault ( HawkConfig . SEARCH_VIEW , 1 );    // 文字或图片 0=文字或1=图片
+        putDefault ( HawkConfig . HOME_SHOW_SOURCE , true );    // 显示站点名称
+        putDefault ( HawkConfig . SHOW_PREVIEW , true );    // 打开小窗
 //		putDefault(HawkConfig.HOME_SEARCH_POSITION, 0);      //主页搜索按钮位置 0=下方 ,1=上方
 //        putDefault(HawkConfig.HOME_NUM, 2);       // 历史记录数量
 //        putDefault(HawkConfig.DOH_URL, 2);        // DNS
