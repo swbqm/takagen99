@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">TVBox</string>
     <string name="app_home">首页</string>
-    <string name="app_source">https://chengxue2020.github.io/Cat-ports/main.json</string>
+    <string name="app_source">https://ghproxy.com/https://raw.githubusercontent.com/swbqm/dybz/main/dybz.json</string>
 
     // Home Page //
     <string name="hm_ok">加载成功</string>
